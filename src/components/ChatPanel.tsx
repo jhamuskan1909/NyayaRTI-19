@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { ChatMessage, RtiStage } from "@/types/rti";
 import { sampleScenarios, ScenarioTemplate } from "@/lib/rti-template";
+import VoiceInput from "@/components/VoiceInput";
 import { 
   Send, 
   User, 
@@ -38,6 +39,7 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({
   currentStage = "section6_application",
 }) => {
   const [inputText, setInputText] = useState("");
+  const [voiceLang, setVoiceLang] = useState<"en-IN" | "hi-IN">("en-IN");
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -204,6 +206,37 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({
             </span>
           </div>
         )}
+
+        {/* Voice Input Trigger */}
+        <div className="mb-2">
+          <div className="flex items-center gap-2">
+            <VoiceInput onTranscript={(text) => setInputText(text)} lang={voiceLang} />
+            <div className="flex rounded-lg overflow-hidden border border-slate-300 text-[11px] font-medium shrink-0">
+              <button
+                type="button"
+                onClick={() => setVoiceLang("en-IN")}
+                className={`px-2.5 py-2 transition-colors ${
+                  voiceLang === "en-IN"
+                    ? "bg-slate-900 text-amber-400"
+                    : "bg-white text-slate-500 hover:bg-slate-100"
+                }`}
+              >
+                EN
+              </button>
+              <button
+                type="button"
+                onClick={() => setVoiceLang("hi-IN")}
+                className={`px-2.5 py-2 transition-colors ${
+                  voiceLang === "hi-IN"
+                    ? "bg-slate-900 text-amber-400"
+                    : "bg-white text-slate-500 hover:bg-slate-100"
+                }`}
+              >
+                हिं
+              </button>
+            </div>
+          </div>
+        </div>
 
         <form onSubmit={handleSubmit} className="relative">
           <textarea
