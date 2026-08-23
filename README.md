@@ -12,7 +12,7 @@ Citizens frequently face rejection or bureaucratic non-responsiveness because in
 
 - **The Challenge**: Over 1.5 crore RTI applications are filed in India annually, yet more than 40% face rejection, delay, or jurisdictional misdirection due to non-admissible phrasing (asking conversational "why" questions rather than demanding certified documents), missing statutory declarations, or failure to escalate via First Appeals after the 30-day statutory window.
 - **The Solution**: An intelligent legal intake and case-management system that:
-  1. Accepts citizen inputs in plain English, Hindi, or Hinglish.
+  1. Accepts citizen inputs in plain English, Hindi, or Hinglish — by typing or by speaking.
   2. Synthesizes admissible inquiries under **Section 6(1)** (work orders, measurement books, daily progress logs, reasons on record).
   3. Formats an official **Form 'A' Legal Dossier** with live real-time split-screen synchronization.
   4. Generates single-click **PDF export** and direct formatted text for **`rtionline.gov.in`**.
@@ -50,6 +50,16 @@ Citizens frequently face rejection or bureaucratic non-responsiveness because in
   - **Download PDF**: Formatted formal letter with official header, signature block, and fee details.
   - **Copy Portal Text**: Plain-text output optimized for Central and State online RTI portals.
 
+### Voice Input
+- Citizens can speak their grievance instead of typing it, using the browser's built-in speech recognition — lowering the barrier for citizens with low literacy or limited typing comfort.
+- A language toggle (**EN** / **हिं**) lets the citizen tell the app whether they're speaking English or Hindi, so speech is transcribed accurately in either language.
+- Listens continuously through natural pauses in speech and only stops when the citizen taps the mic again, so grievances can be dictated in full without being cut off mid-sentence.
+- Available in Chrome and Edge (browsers with Web Speech API support); other browsers fall back to text input.
+
+### Multilingual Conversational Replies
+- Detects whether the citizen is writing (or speaking) in English, Hindi, or Hinglish, and replies in that same language — so the back-and-forth clarification dialogue feels natural regardless of which language the citizen is most comfortable in.
+- The generated Form 'A' / Appeal document itself always remains in formal English, since that is the format required for submission to a government Public Information Officer.
+
 ### Deadline Forecasting
 - Automatically computes every statutory clock the moment an application is drafted — the **30-day Section 7(1) response window**, the **5-day Section 6(3)** transfer deadline, and the **30-day Section 19(1)** First Appeal filing window.
 - Surfaces a forward-looking timeline showing exactly when a citizen becomes eligible to escalate, so no statutory deadline is missed by accident.
@@ -73,6 +83,7 @@ Citizens frequently face rejection or bureaucratic non-responsiveness because in
 - **Styling & Components**: Tailwind CSS, Lucide React Icons
 - **Document Generation**: jsPDF (client-side A4 legal formatting)
 - **Extraction Layer**: Groq Cloud (Llama-3.3-70B) / Google Gemini 2.5 Flash with built-in statutory legal heuristic engine
+- **Voice Recognition**: Browser-native Web Speech API (no external API key required)
 
 ---
 
