@@ -51,7 +51,7 @@ Citizens frequently face rejection or bureaucratic non-responsiveness because in
   - **Copy Portal Text**: Plain-text output optimized for Central and State online RTI portals.
 
 ### Voice Input
-- Citizens can speak their grievance instead of typing it, using the browser's built-in speech recognition — lowering the barrier for citizens with low literacy or limited typing comfort.
+- Citizens can speak their grievance instead of typing it, using the browser's built-in speech recognition - lowering the barrier for citizens with low literacy or limited typing comfort.
 - A language toggle (**EN** / **हिं**) lets the citizen tell the app whether they're speaking English or Hindi, so speech is transcribed accurately in either language.
 - Listens continuously through natural pauses in speech and only stops when the citizen taps the mic again, so grievances can be dictated in full without being cut off mid-sentence.
 - Available in Chrome and Edge (browsers with Web Speech API support); other browsers fall back to text input.
