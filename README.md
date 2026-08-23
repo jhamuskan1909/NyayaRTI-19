@@ -4,7 +4,7 @@
 
 NyayaRTI is an end-to-end civic-tech platform that translates everyday citizen grievances into legally structured, statutory inquiries under India's **Right to Information (RTI) Act, 2005**.
 
-Citizens frequently face rejection or bureaucratic non-responsiveness because informal grievances (*"the road in my colony has potholes", "scholarship disbursement delayed 10 months", "EPFO claim is pending"*) are rarely formulated as concrete requests for certified official records. NyayaRTI guides citizens through statutory fact-finding, identifies the competent Public Information Officer (PIO), embeds mandatory statutory clauses (Section 6(1), Section 6(3), Section 7(1)), and generates an instantly downloadable, compliant Form 'A' dossier or Section 19(1) First Appeal memorandum — while actively tracking every statutory clock and escalation path until the citizen actually receives a resolution.
+Citizens frequently face rejection or bureaucratic non-responsiveness because informal grievances (*"the road in my colony has potholes", "scholarship disbursement delayed 10 months", "EPFO claim is pending"*) are rarely formulated as concrete requests for certified official records. NyayaRTI guides citizens through statutory fact-finding, identifies the competent Public Information Officer (PIO), embeds mandatory statutory clauses (Section 6(1), Section 6(3), Section 7(1)), and generates an instantly downloadable, compliant Form 'A' dossier or Section 19(1) First Appeal memorandum - while actively tracking every statutory clock and escalation path until the citizen actually receives a resolution.
 
 ---
 
